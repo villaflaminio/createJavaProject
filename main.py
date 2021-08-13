@@ -9,6 +9,7 @@ def get_conferma():
         return True
     else:
         return False
+
 def comunication_library(project_path,project_group):
     path_to_be_create = []
     project_group_path =project_path + "src/main/java/" + project_group.replace(".", "/") + ("/comunication")
@@ -51,7 +52,7 @@ def create_project():
     print(u.bcolors.OKBLUE+" best practice = com.azienda" + u.bcolors.END)
     project_group = input()
     package_name = project_group + "."+project_name
-    print("Il nome del package sarà: " + package_name )
+    print("Il nome del package sarà: " + u.bcolors.WARNING+ package_name +  u.bcolors.END )
     if get_conferma():
         create_base_path(project_name, project_group)
 
